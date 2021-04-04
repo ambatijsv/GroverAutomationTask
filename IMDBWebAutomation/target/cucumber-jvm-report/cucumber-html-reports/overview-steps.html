@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>IMDBWebAutomation</td>
+        <td>1</td>
+      <td>04 Apr 2021, 20:58</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">Hooks.closeBrowser()</td>
+              <td>15</td>
+              <td class="duration" data-value="3154441346">3.154</td>
+              <td class="duration" data-value="3154441346">4.251</td>
+              <td class="duration" data-value="47316620200">47.316</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">IMDBTopRatedMoviesSteps.user_lands_on_top_rated_movies_list_page()</td>
+              <td>15</td>
+              <td class="duration" data-value="13680226">0.013</td>
+              <td class="duration" data-value="13680226">0.019</td>
+              <td class="duration" data-value="205203400">0.205</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">IMDBTopRatedMoviesSteps.user_launches_the_IDMB_application()</td>
+              <td>15</td>
+              <td class="duration" data-value="11601056833">11.601</td>
+              <td class="duration" data-value="11601056833">15.245</td>
+              <td class="duration" data-value="174015852501">2:54.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">IMDBTopRatedMoviesSteps.user_selects_sorting_option_as_IMDb_Rating_from_the_sort_by_dropdown(String)</td>
+              <td>5</td>
+              <td class="duration" data-value="3055154719">3.055</td>
+              <td class="duration" data-value="3055154719">3.763</td>
+              <td class="duration" data-value="15275773599">15.275</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">IMDBTopRatedMoviesSteps.verify_the_UI_for_top_rated_movies_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="11475224400">11.475</td>
+              <td class="duration" data-value="11475224400">11.475</td>
+              <td class="duration" data-value="11475224400">11.475</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">IMDBTopRatedMoviesSteps.verify_top_rated_movies_count_should_be_at_least_one_movie_in_the_list()</td>
+              <td>6</td>
+              <td class="duration" data-value="13857713266">13.857</td>
+              <td class="duration" data-value="13857713266">14.061</td>
+              <td class="duration" data-value="83146279600">1:23.146</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">WesternGenreSteps.user_click_on_Western_genre_link_on_right_navigation_options_list()</td>
+              <td>9</td>
+              <td class="duration" data-value="7294377355">7.294</td>
+              <td class="duration" data-value="7294377355">9.989</td>
+              <td class="duration" data-value="65649396199">1:5.649</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">WesternGenreSteps.user_click_on_sorting_by_option_in_the_western_Genre_Page(String)</td>
+              <td>9</td>
+              <td class="duration" data-value="8992625500">8.992</td>
+              <td class="duration" data-value="8992625500">15.795</td>
+              <td class="duration" data-value="80933629500">1:20.933</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">WesternGenreSteps.user_should_land_on_Western_Genre_Page_successfully()</td>
+              <td>9</td>
+              <td class="duration" data-value="2188762899">2.188</td>
+              <td class="duration" data-value="2188762899">2.237</td>
+              <td class="duration" data-value="19698866098">19.698</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">WesternGenreSteps.vrify_that_movies_details_are_load_as_per_selected_the_option(String)</td>
+              <td>9</td>
+              <td class="duration" data-value="2410907455">2.410</td>
+              <td class="duration" data-value="2410907455">3.571</td>
+              <td class="duration" data-value="21698167096">21.698</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>10</td>
+            <td>93</td>
+            <td class="duration">5.585</td>
+            <td class="duration">2:54.015</td>
+            <td class="duration">8:39.415</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

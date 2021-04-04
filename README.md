@@ -23,18 +23,16 @@ After completion of the script execution reports will be saved in "IMDBWebAutoma
 
 ===== How Framework Will Work ========
 
-Once run the project through TestRunner.java or pom.xml file then control will move to feature file to read steps
+1. Once run the project through TestRunner.java or pom.xml file then control will move to feature file to read steps
 
-After that control will move to step definitions package to read the glue code.
+2. After that control will move to step definitions package to read the glue code.
 
-From step definitions control move to Page files to do actual test execution.
+3. From step definitions control move to Page files to do actual test execution.
 
-In the test base class we are maintaining the driver details and launching the browser.
+4. In the test base class we are maintaining the driver details and launching the browser.
 
-Utils containing the utility method for the the project.
+5. Utils containing the utility method for the the project.
 
-Configuration file having all the config details for the drivers, driver keys and reports path etc..
+6. Configuration file having all the config details for the drivers, driver keys and reports path etc..
 
-Finally reports will be stored under "IMDBWebAutomation/target/cucumber-jvm-report/cucumber-html-report" folder.
-
-Here we are using the cucumber JVM reports
+7. Finally reports will be stored under "IMDBWebAutomation/target/cucumber-jvm-report/cucumber-html-report" folder. Here we are using the cucumber JVM reports
